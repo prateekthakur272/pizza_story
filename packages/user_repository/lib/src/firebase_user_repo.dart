@@ -13,7 +13,7 @@ class FirebaseUserRepository implements UserRepository{
   FirebaseUserRepository({FirebaseAuth? firebaseAuth}) : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance;
 
   @override
-  Future<void> logOut() async {
+  Future<void> signOut() async {
     await _firebaseAuth.signOut();
   }
 

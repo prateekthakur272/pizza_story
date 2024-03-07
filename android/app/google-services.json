@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "639718599653",
+    "project_id": "pizza-story-272",
+    "storage_bucket": "pizza-story-272.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639718599653:android:d3292719f72b213ef75d0c",
+        "android_client_info": {
+          "package_name": "prateekthakur.dev.pizza_story"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_UP_wSZWsQXT8iEIhr8vAg0cc_VhlifY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

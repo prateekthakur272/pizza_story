@@ -53,7 +53,7 @@ class FirebaseUserRepository implements UserRepository{
   Stream<MyUser> get user {
     return _firebaseAuth.authStateChanges().flatMap((user) async*{
       if(user == null){
-        yield MyUser.empty();
+        yield MyUser.empty;
       }else{
         yield await usersCollection.doc(user.uid).get().then((data) => MyUser.fromEntity(MyUserEntity.fromMap(data.data()!)));
       }

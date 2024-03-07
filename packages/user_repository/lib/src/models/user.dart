@@ -8,7 +8,7 @@ class MyUser{
   bool hasActiveCart;
 
   MyUser({required this.name, required this.email, required this.id, required this.hasActiveCart});
-  factory MyUser.empty() => MyUser(name: '', email: '', id: '', hasActiveCart: false);
+  static final empty = MyUser(name: '', email: '', id: '', hasActiveCart: false);
 
   MyUserEntity toEntity(){
     return MyUserEntity(name: name, email: email, id: id, hasActiveCart: hasActiveCart);

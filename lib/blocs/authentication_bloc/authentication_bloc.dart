@@ -16,7 +16,7 @@ class AuthenticationBloc extends Bloc<AuthenticationEvent, AuthenticationState> 
       add(AuthenticationUserChanges(user));
     });
     on<AuthenticationUserChanges>((event, emit) {
-      if (event.user != MyUser.empty()){
+      if (event.user != MyUser.empty){
         emit(AuthenticationState.authenticated(event.user));
       }else{
         emit(const AuthenticationState.unauthenticated());

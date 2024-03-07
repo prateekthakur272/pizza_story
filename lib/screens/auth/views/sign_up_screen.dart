@@ -140,7 +140,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       child: TextButton(
                         onPressed: () {
                           if(formKey.currentState!.validate()){
-                            MyUser user = MyUser.empty();
+                            MyUser user = MyUser.empty;
                             user.email = emailController.text.trim();
                             user.name = nameController.text.trim();
                             setState(() {

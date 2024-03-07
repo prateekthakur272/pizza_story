@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:pizza_story/screens/auth/views/sign_in_screen.dart';
 import 'package:pizza_story/screens/auth/views/sign_up_screen.dart';
 
@@ -30,7 +29,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           child: Stack(
             children: [
               Align(
-                alignment: const AlignmentDirectional(20, 1.2),
+                alignment: const AlignmentDirectional(20, -0.8),
                 child: Container(
                   height: MediaQuery.of(context).size.width,
                   width: MediaQuery.of(context).size.width,

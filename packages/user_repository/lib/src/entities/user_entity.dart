@@ -16,6 +16,6 @@ class MyUserEntity{
   }
 
   factory MyUserEntity.fromMap(Map<String, dynamic> map){
-    return MyUserEntity(id: map['id'], name: map['name'], email: map['email'], hasActiveCart: map['hasActiveCarr']);
+    return MyUserEntity(id: map['id'], name: map['name'], email: map['email'], hasActiveCart: map['hasActiveCarr']??false);
   }
 }

@@ -9,7 +9,6 @@ class FirebasePizzaRepo implements PizzaRepo {
 
   @override
   Future<List<Pizza>> getPizzas() async {
-    print('getting pizzas');
     try {
       final docs = (await pizzaCollection.get()).docs;
       return docs.map((doc) => Pizza.fromMap(doc.data())).toList();

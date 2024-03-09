@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pizza_repository/pizza_repository.dart';
 import 'package:pizza_story/screens/auth/blocs/sign_in_bloc/sign_in_bloc.dart';
 import 'package:pizza_story/screens/home/blocs/get_pizza_bloc/get_pizza_bloc.dart';
 import 'package:pizza_story/screens/home/blocs/widgets/pizza_grid_view.dart';
@@ -46,14 +45,14 @@ class HomeScreen extends StatelessWidget {
             builder: (context, state) {
               if (state is GetPizzaSuccess) {
                 return GridView.builder(
-                  itemCount: 4,
+                  itemCount: state.pizzas.length,
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
                             crossAxisSpacing: 16,
                             mainAxisSpacing: 16,
                             childAspectRatio: 9/16),
-                    itemBuilder: (context, index) => PizzaGridView(pizza: Pizza(name: 'Peproni', pizzaId: '123', isVeg: true, description: 'nice spicy pizza', discount: 10, price: 100, picture: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Chilly-chicken-Pizza-min.jpg', macros: Macros(calories: 114, proteins: 14, fat: 20, carbs: 12), spicy: 1),));
+                    itemBuilder: (context, index) => PizzaGridView(pizza: state.pizzas[index],));
               }
               if(state is GetPizzaLoading){
                 return const CircularProgressIndicator();

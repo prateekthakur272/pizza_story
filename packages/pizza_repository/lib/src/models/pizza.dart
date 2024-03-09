@@ -43,7 +43,7 @@ class Pizza {
         description: map['description'],
         discount: map['discount'],
         isVeg: map['isVeg'],
-        macros: map['macros'],
+        macros: Macros.fromMap(map['macros']),
         picture: map['picture'],
         price: map['price'],
         spicy: map['spicy']);

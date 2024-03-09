@@ -70,9 +70,6 @@ class PizzaGridView extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 8,
-            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12),
               child: Text(
@@ -92,7 +89,7 @@ class PizzaGridView extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: Row(
                   children: [
-                    Text('Rs.${pizza.price - (pizza.price * pizza.discount/100)}',style: TextStyle(fontSize: 16, color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.w700),),
+                    Text('Rs.${(pizza.price - (pizza.price * pizza.discount/100)).floor()}',style: TextStyle(fontSize: 16, color: Theme.of(context).colorScheme.primary, fontWeight: FontWeight.w700),),
                     const SizedBox(width: 5,),
                     Text('Rs.${pizza.price}', style: TextStyle(fontSize: 12, color: Colors.grey.shade500, fontWeight: FontWeight.w700, decoration: TextDecoration.lineThrough),),
                     const Spacer(),

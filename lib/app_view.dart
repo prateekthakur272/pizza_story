@@ -5,7 +5,7 @@ import 'package:pizza_story/blocs/authentication_bloc/authentication_bloc.dart';
 import 'package:pizza_story/screens/auth/blocs/sign_in_bloc/sign_in_bloc.dart';
 import 'package:pizza_story/screens/auth/views/welcome_screen.dart';
 import 'package:pizza_story/screens/home/blocs/get_pizza_bloc/get_pizza_bloc.dart';
-import 'package:pizza_story/screens/home/home_screen.dart';
+import 'package:pizza_story/screens/home/views/home_screen.dart';
 
 class MyAppView extends StatelessWidget {
   const MyAppView({super.key});

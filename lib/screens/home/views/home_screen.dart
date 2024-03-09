@@ -53,9 +53,12 @@ class HomeScreen extends StatelessWidget {
                             crossAxisSpacing: 16,
                             mainAxisSpacing: 16,
                             childAspectRatio: 9/16),
-                    itemBuilder: (context, index) => PizzaGridView(pizza: Pizza(name: 'Peproni', pizzaId: '123', isVeg: true, description: 'nice spicy pizza', discount: 10, price: 100, picture: '', macros: Macros(calories: 114, proteins: 14, fat: 20, carbs: 12), spicy: 1),));
+                    itemBuilder: (context, index) => PizzaGridView(pizza: Pizza(name: 'Peproni', pizzaId: '123', isVeg: true, description: 'nice spicy pizza', discount: 10, price: 100, picture: 'https://www.licious.in/blog/wp-content/uploads/2020/12/Chilly-chicken-Pizza-min.jpg', macros: Macros(calories: 114, proteins: 14, fat: 20, carbs: 12), spicy: 1),));
               }
-              return const CircularProgressIndicator();
+              if(state is GetPizzaLoading){
+                return const CircularProgressIndicator();
+              }
+              return const Text('Some error occurred');
             },
           ),
         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pizza_repository/pizza_repository.dart';
+import 'package:pizza_story/screens/home/views/pizza_detail_screen.dart';
 
 class PizzaGridView extends StatelessWidget {
   final Pizza pizza;
@@ -15,12 +16,13 @@ class PizzaGridView extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       child: InkWell(
         borderRadius: BorderRadius.circular(16),
-        onTap: () {},
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=> PizzaDetailScreen(pizza: pizza)));
+        },
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(
-                'https://www.licious.in/blog/wp-content/uploads/2020/12/Chilly-chicken-Pizza-min.jpg'),
+            Image.network(pizza.picture),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               child: Row(
